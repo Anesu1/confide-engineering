@@ -4,7 +4,7 @@ import Paragraph from "../components/styled/paragraph";
 
 export default function WhoWeAre() {
   return (
-    <section className="p-5 md:p-[5%]">
+    <section id="about-second" className="p-5 md:p-[5%]">
       <div className="top lg:flex lg:justify-between lg:items-center">
         <div className="left">
           <Heading first="who" middle="A few words about us" last="we are" />

@@ -11,7 +11,7 @@ export default function GeneralHardwareSupplies() {
         imageUrl="gsh/banner.webp"
         text="General"
         text1="Hardware Supplies"
-        link="/"
+        link="#rest"
       />
       <SecondComponent middle="General Hardware Supplies">
         <Paragraph>

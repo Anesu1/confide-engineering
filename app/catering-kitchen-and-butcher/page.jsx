@@ -95,7 +95,7 @@ export default function HospitalEquipment() {
         imageUrl="catering-and-butcher/banner.webp"
         text="Catering Equipment,"
         text1="Industrial Kitchen & Butchery Equipment"
-        link="/"
+        link="#rest"
       />
       <SecondComponent middle="Catering & Industrial Kitchen & Butchery Equipment">
         <Paragraph>

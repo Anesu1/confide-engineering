@@ -63,7 +63,7 @@ const list1 = [
 
 export default function WhatWeOffer() {
   return (
-    <section className='p-5 md:p-[5%]'>
+    <section id="services" className='p-5 md:p-[5%]'>
       <div className="top lg:flex lg:justify-between">
         <div className="left">
             <Heading first="our" middle="What we offer" last="services" />

@@ -71,7 +71,7 @@ export default function HospitalEquipment() {
         imageUrl="hospital/banner.webp"
         text="Hospital"
         text1="Equipment"
-        link="/"
+        link="#rest"
       />
       <SecondComponent middle="Hospital Equipment">
         <Paragraph>

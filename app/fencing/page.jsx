@@ -39,7 +39,7 @@ export default function Fencing() {
         imageUrl="fencing/banner.webp"
         text="Fencing"
         text1=""
-        link="/"
+        link="#rest"
       />
       <SecondComponent middle="Fencing">
         <Paragraph>

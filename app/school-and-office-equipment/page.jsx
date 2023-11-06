@@ -88,7 +88,7 @@ export default function SchoolAndOfficeEquipment() {
         imageUrl="school-and-office/banner.webp"
         text="School &"
         text1="Office Equipment"
-        link="/"
+        link="#rest"
       />
       <SecondComponent middle="School & Office Equipment">
         <Paragraph>

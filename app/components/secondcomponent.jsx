@@ -5,7 +5,7 @@ import GetQuote from "./buttons/getquote";
 
 export default function SecondComponent({children, middle}) {
   return (
-    <section className="p-5 md:p-[5%]">
+    <section id="rest" className="p-5 md:p-[5%]">
       <div className="top lg:flex lg:justify-between lg:items-center gap-10">
         <div className="left">
           <HeadingCaps first="OUR" middle={middle} last="PRODUCTS" />

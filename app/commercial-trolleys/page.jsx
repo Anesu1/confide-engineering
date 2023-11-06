@@ -11,7 +11,7 @@ export default function CommercialTrolleys() {
         imageUrl="about/banner.webp"
         text="Commercial Trolleys"
         text1=""
-        link="/"
+        link="#rest"
       />
       <SecondComponent middle="Commercial Trolleys">
         <Paragraph>

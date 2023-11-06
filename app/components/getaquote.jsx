@@ -9,9 +9,9 @@ import { productSansBold, productSansRegular } from '../font/font';
 export default function GetAQuote() {
   return (
     <section className="bg-[url('/images/pic1.webp')] bg-cover bg-center p-[5%] relative pb-[250px] md:pb-[200px] md:pt-[100px] lg:pt-[190px] lg:pb-[250px]">
-      <div className="max-w-[800px] m-auto text-white  text-left flex justify-center items-center flex-col ">
+      <div className="max-w-[900px] m-auto text-white  text-left flex justify-center items-center flex-col ">
         
-        <h2 className={`${ productSansBold.className } text-2xl md:text-4xl lg:leading-[70px] lg:text-6xl `}>Our clientele comprises hospitals, educational
+        <h2 className={`${ productSansBold.className } text-2xl md:text-4xl lg:leading-[60px] lg:text-5xl `}>Our clientele comprises hospitals, educational
             institutions, corporations, contractors, individual consumers,
             municipal entities, and government agencies.</h2>
        
