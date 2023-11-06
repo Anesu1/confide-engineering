@@ -55,14 +55,17 @@ const list = [
 
         
 
-export default function MyDropdown() {
+export default function MyDropdown({setIsOpen}) {
   const [open, setOpen] = useState(false)
   return (
     <motion.div variants={mobile} className={open ? "w-max" : "w-max overflow-hidden transition"}>
         <span className="flex items-center uppercase justify-center pb-3 lg:capitalize" onClick={()=> setOpen(!open)}>Our Products <BsChevronDown className={open ? "ml-3 rotate-180 transition-all" : "ml-3 transition-all"} /></span>
         <div className={open ? "max-h-[900px] text-black bg-white flex flex-col rounded transition dropthing" : "transition text-black bg-white relative flex flex-col rounded h-auto max-h-0 dropthing"}>
             {list.map((item, i)=>{
-              return <Link onClick={() => setOpen(false)} key={i} className="block py-3 px-7 transition hover:bg-gray-400 cursor-pointer" href={item.link}>{item.text}</Link>
+              return <Link onClick={() => {
+                setOpen(false);
+                setIsOpen(false);
+              }} key={i} className="block py-3 px-7 transition hover:bg-gray-400 cursor-pointer" href={item.link}>{item.text}</Link>
             })}
             
             

@@ -139,7 +139,7 @@ const Navigation = () => {
                         onClick={()=> setOpen(false)}
                       />
                     </div>
-                    <MyDropdown />
+                    <MyDropdown setIsOpen={setOpen} />
                       
 
                
