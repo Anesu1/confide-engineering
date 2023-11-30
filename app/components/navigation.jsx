@@ -80,17 +80,34 @@ const Navigation = () => {
     <header className="absolute w-full z-50 bg-transparent">
       <nav className="flex items-center justify-between px-3 py-4 md:px-5 md:py-10 lg:px-15 xl:px-20">
         <div className="">
-          
-          <Image height={100} width={250} src="/images/logo.png" alt="Confide Engineering Logo" />
+          <Image
+            height={100}
+            width={250}
+            src="/images/logo.png"
+            alt="Confide Engineering Logo"
+          />
         </div>
         <div className="lg:flex hidden gap-12 text-md text-white">
-          
-            <AnimatedLink link="/" title={"Home"} />
-            <AnimatedLink link="/about" title={"About"} />
-            
-            <MyDropdown />
-            <AnimatedLink link="#contact" title={"Contact"} />
-            <span className=" px-3 rounded-[26px] border-2 border-white flex items-center translate-y-[-10px]">+263 ( 4 ) 331 307-8</span>
+          <AnimatedLink
+            onClick={() => setOpen(false)}
+            link="/"
+            title={"Home"}
+          />
+          <AnimatedLink
+            onClick={() => setOpen(false)}
+            link="/about"
+            title={"About"}
+          />
+
+          <MyDropdown setIsOpen={setOpen} />
+          <AnimatedLink
+            onClick={() => setOpen(false)}
+            link="#contact"
+            title={"Contact"}
+          />
+          <span className=" px-3 rounded-[26px] border-2 border-white flex items-center translate-y-[-10px]">
+            +263 ( 4 ) 331 307-8
+          </span>
         </div>
         <div
           className="cursor-pointer lg:hidden text-lg text-white"
@@ -110,7 +127,9 @@ const Navigation = () => {
           >
             <div className="flex h-full flex-col">
               <div className="flex justify-between">
-                <h1 className="text-lg text-white font-semibold tracking-widest">Confide Engineering</h1>
+                <h1 className="text-lg text-white font-semibold tracking-widest">
+                  Confide Engineering
+                </h1>
                 <p
                   className="cursor-pointer text-lg text-white"
                   onClick={toggleMenu}
@@ -126,31 +145,28 @@ const Navigation = () => {
                 className="flex flex-col h-full justify-center font-lora items-center gap-4 "
               >
                 <div className="overflow-hidden">
-                      <MobileNavLink
-                        title="Home"
-                        href='/'
-                        onClick={()=> setOpen(false)}
-                      />
-                    </div>
+                  <MobileNavLink
+                    title="Home"
+                    href="/"
+                    onClick={() => setOpen(false)}
+                  />
+                </div>
                 <div className="overflow-hidden">
-                      <MobileNavLink
-                        title="About"
-                        href="/about"
-                        onClick={()=> setOpen(false)}
-                      />
-                    </div>
-                    <MyDropdown setIsOpen={setOpen} />
-                      
+                  <MobileNavLink
+                    title="About"
+                    href="/about"
+                    onClick={() => setOpen(false)}
+                  />
+                </div>
+                <MyDropdown setIsOpen={setOpen} />
 
-               
-               
                 <div className="overflow-hidden">
-                      <MobileNavLink
-                        title="Contact"
-                        href="#contact"
-                        onClick={()=> setOpen(false)}
-                      />
-                    </div>
+                  <MobileNavLink
+                    title="Contact"
+                    href="#contact"
+                    onClick={() => setOpen(false)}
+                  />
+                </div>
               </motion.div>
             </div>
           </motion.div>

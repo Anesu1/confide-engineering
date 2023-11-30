@@ -3,7 +3,7 @@ import React from 'react'
 import {useState} from "react"
 import TextField from '@mui/material/TextField';
 import { avenirNext, productSansBold } from '@/app/font/font';
-import { Fade } from 'react-reveal';
+
 import axios from "axios";
 
 
@@ -147,11 +147,11 @@ export default function Form() {
         </button>
         {isSubmitted && (
         <div style={{ color: "green", marginTop: 20, textAlign: "center" }}>
-          <Fade bottom>Submitted successfully!</Fade>{" "}
+          <p>Submitted successfully!</p>{" "}
         </div>
       )}
       <div style={{ color: "red", marginTop: 20, textAlign: "center" }}>
-        <Fade bottom>{isFailed}</Fade>
+        <p>{isFailed}</p>
       </div>
       </form>
       
