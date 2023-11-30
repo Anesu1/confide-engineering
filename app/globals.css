@@ -96,7 +96,7 @@ form .MuiFormControl-root  [data-shrink="true"]::after, form .MuiInputBase-root:
 
 }
 form .MuiInputLabel-formControl {
-  top: 30px;
+  top: 25px;
   left: 30px;
 }
 form input{
@@ -146,3 +146,4 @@ form .MuiFormControl-root  .MuiInput-root::after{
     object-fit: cover;
   }
   
+
