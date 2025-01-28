@@ -11,9 +11,7 @@ export default function Contact() {
       <h3 className={` ${productSansBold.className} text-3xl pb-2`}>Have a project in mind?</h3>
       <p className="font-light">
         For inquiries or to discuss your container needs, please reach out to
-        our dedicated team at Confide Engineering. We specialize in innovative
-        solutions for offices, accommodations, ablution facilities, storage, and
-        tuckshops. Let&apos;s collaborate to bring your vision to life. Contact us
+        our dedicated team at Confide Engineering. Let&apos;s collaborate to bring your vision to life. Contact us
         today!
       </p>
       <Form />

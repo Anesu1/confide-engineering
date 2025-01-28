@@ -1,89 +1,52 @@
-"use client"
-import React from 'react'
-import {useState} from "react"
-import TextField from '@mui/material/TextField';
-import { avenirNext, productSansBold } from '@/app/font/font';
+"use client";
+import React from "react";
+import { useState, useEffect } from "react";
+import TextField from "@mui/material/TextField";
+import { sendEmail } from "../../lib/send-email";
+import { useForm } from "react-hook-form";
 
-import axios from "axios";
 
 
 export default function Form() {
-   const [isSubmitted, setIsSubmitted] = useState(false);
-   const [isFailed, setIsFailed] = useState("");
-   const [formData, setFormData] = useState({
-     fullName: "",
-     email: "",
-     contactNumber:"",
-     subject:"",
-     message: "",
-   });
+ const { register, handleSubmit, reset } = useForm({
+    defaultValues: {
+      fullName: "",
+      email: "",
+      contactNumber: "",
+      subject: "",
+      message: "",
+    }
+ });
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
-   const handleInputChange = (event) => {
-     const { name, value } = event.target;
-     setFormData({ ...formData, [name]: value });
-   };
+  function onSubmit(data) {
+    sendEmail(data, setLoading, setIsSuccess, setMessage);
+  }
 
-   const handleSubmit = async (event) => {
-     event.preventDefault();
-     await axios.post(
-        "https://formsubmit.co/a64be50d7a64fbe989df721fe6359a9e",
-        formData
-      ).then((res) => {
-        console.log(res)
-         console.log("Form submission successful:", response.data);
-         setIsSubmitted(true);
-         setTimeout(() => {
-           setIsSubmitted(false);
-           setFormData({
-             fullName: "",
-             email: "",
-             contactNumber: "",
-             subject: "",
-             message: "",
-           });
-         }, 5000);
-      }).catch((error) => {
-        console.log(error)
-        setIsFailed("Form submission failed");
-        setTimeout(() => {
-          setIsFailed("");
-        }, 5000);
-      })
+  useEffect(() => {
+    let timer;
+    if (isSuccess) {
+      timer = setTimeout(() => {
+        setIsSuccess(false);
+        setMessage("");
+        reset();
+      }, 5000);
+    }
 
+    return () => {
+      if (timer) {
+        clearTimeout(timer);
+      }
+    };
+  }, [isSuccess, reset]);
 
-
-    //  try {
-    //    // Send form data to server or API endpoint
-    //    const response = await axios.post(
-    //      "https://formsubmit.co/a64be50d7a64fbe989df721fe6359a9e",
-    //      formData
-    //    );
-    //    console.log("Form submission successful:", response.data);
-    //    setIsSubmitted(true);
-    //    setTimeout(() => {
-    //      setIsSubmitted(false);
-    //      setFormData({
-    //        fullName: "",
-    //        email: "",
-    //        contactNumber: "",
-    //        subject: "",
-    //        message:""
-    //      });
-    //    }, 5000);
-    //  } catch (error) {
-    //   console.log(error)
-    //    setIsFailed("Form submission failed");
-    //    setTimeout(() => {
-    //      setIsFailed("");
-    //    }, 5000);
-    //  }
-   };
   return (
     <>
       <form
-        method="POST"
-        onSubmit={handleSubmit}
-        className={`${avenirNext.className} mt-5 md:flex md:flex-wrap gap-3 justify-between`}
+        onSubmit={handleSubmit(onSubmit)}
+        className={`font-avenir mt-5 md:flex md:flex-wrap gap-3 justify-between`}
       >
         <div className="uppercase md:w-[49%] lg:w-[40.5%]">
           <TextField
@@ -91,27 +54,21 @@ export default function Form() {
             id="username"
             label="Name"
             variant="standard"
-            name="fullName"
-            value={formData.fullName}
-            onChange={handleInputChange}
+            {...register("fullName", { required: true })}
           />
           <TextField
             className="w-full  bg-[#F2F2F2] mb-5"
             id="email"
             type="email"
-            name="email"
+            {...register("email", { required: true })}
             label="Example@mail.com"
-            value={formData.email}
-            onChange={handleInputChange}
             variant="standard"
           />
           <TextField
             className="w-full  bg-[#F2F2F2] mb-5"
             id="contact-number"
-            name="contactNumber"
+            {...register("contactNumber", { required: true })}
             label="contact number"
-            value={formData.contactNumber}
-            onChange={handleInputChange}
             variant="standard"
           />
         </div>
@@ -120,9 +77,7 @@ export default function Form() {
             className="w-full  bg-[#F2F2F2] mb-5"
             id="filled-basicw"
             label="Subject"
-            name="subject"
-            value={formData.subject}
-            onChange={handleInputChange}
+            {...register("subject", { required: true })}
             variant="standard"
           />
           <TextField
@@ -130,9 +85,7 @@ export default function Form() {
             className="w-full bg-[#F2F2F2] mb-5"
             label="Message"
             multiline
-            name="message"
-            value={formData.message}
-            onChange={handleInputChange}
+            {...register("message", { required: true })}
             rows={7}
             variant="filled"
           />
@@ -140,22 +93,18 @@ export default function Form() {
 
         <button
           type="submit"
-          onClick={handleSubmit}
           className="bg-[#005180] text-white h-[50px] text-center w-full"
         >
-          Send Message
+          {loading ? (
+            <div className="loading-button"></div>
+          ) : isSuccess ? (
+            "Success"
+          ) : (
+            "Submit"
+          )}
         </button>
-        {isSubmitted && (
-        <div style={{ color: "green", marginTop: 20, textAlign: "center" }}>
-          <p>Submitted successfully!</p>{" "}
-        </div>
-      )}
-      <div style={{ color: "red", marginTop: 20, textAlign: "center" }}>
-        <p>{isFailed}</p>
-      </div>
+        {message && <p className="text-primary font-primary">Message Sent</p>}
       </form>
-      
     </>
   );
 }
-

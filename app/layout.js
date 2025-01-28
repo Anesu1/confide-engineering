@@ -4,8 +4,10 @@ import Navigation from "./components/navigation";
 import GetAQuote from "./components/getaquote";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
-import { productSansRegular } from "./font/font";
-import Whatsapp from "./components/styled/whatsapp";
+import { productSansRegular, avenirNext,
+  productSansBold
+ } from "./font/font";
+import Whatsapp from "./components/styled/whatsapp";  
 import Head from "next/head";
 
 export const metadata = {
@@ -24,7 +26,9 @@ export default function RootLayout({ children }) {
           content="Engineering solutions, Innovative products, Utilities, Metalworking, Metal processing, Fabrication services, Custom metalwork, Metal products, Metalworking tools, Metalworking equipment, Steel fabrication, Steel products, Steelworking, Steel processing, Industrial equipment, Manufacturing services, Metalworking machinery, Sheet metal, Metalworking techniques, Metalworking processes, Metalworking technology, Metalworking expertise, Quality engineering, Contemporary market needs, Market innovation, Global marketplace, Local marketplace, Steel frames, Custom metal fabrication, Industrial hardware, Medical supplies, Educational supplies, Commercial kitchen equipment, Food processing equipment, Metalworking capabilities, Metal finishing, Metal assembly, Metal cutting, Metal shaping, Metal design, Metal finishing techniques, Metal finishing processes, Metalworking craftsmanship, Custom metal design, Metalworking services, Metalworking expertise, Zimbabwe, Manufacturer, Supplier, Medical equipment, Catering equipment, Butchery equipment, Bakery equipment, Commercial trolleys, School furniture, Office furniture, Welding, Metal fabrication, Hardware, Window frames, Door frames, Paint, Hospitals, Educational institutions, Corporations, Contractors, Individual consumers, Municipal entities, Government agencies, International standards, Vision Statement, Mission Statement, Plasma Cutting, Metal Sheet Rolling, Metal Sheet Fabrication, Metal Sheet Bending, Round Tube Bending, Palisade Fence Punching, Spot Welding, Notching, Hole Punching on Metal Sheet (19mm, 25mm, 32mm, 38mm), Knockout Punching (19mm, 25mm), Hospital Equipment, School and Office Equipment, Catering & Butcher Equipment, Commercial Trolleys, Fencing, General Hardware Supplies."
         />
       </Head>
-      <body className={productSansRegular.className}>
+      <body
+        className={` ${productSansRegular.variable} ${productSansBold.variable} ${avenirNext.variable} `}
+      >
         <Navigation />
         {children}
 

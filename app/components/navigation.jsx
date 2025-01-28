@@ -106,7 +106,7 @@ const Navigation = () => {
             title={"Contact"}
           />
           <span className=" px-3 rounded-[26px] border-2 border-white flex items-center translate-y-[-10px]">
-            +263 ( 4 ) 331 307-8
+            +263 ( 242 ) 331 307-8
           </span>
         </div>
         <div

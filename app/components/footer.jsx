@@ -17,8 +17,9 @@ export default function Footer() {
           Harare, Zimbabwe{" "}
         </p>
         <p className={`${productSansBold.className} text-2xl mb-3`}>
-          Tel: +263 &#40; 4 &#41; 331 307-8 <br />
-          Cell: +263 772 420 069
+          Tel: +263 &#40; 242 &#41; 331 307-8 <br />
+          Cell: +263 772 420 069 <br />
+          Cell: +263 771 519 756
         </p>
         <p className="text-2xl mb-3">sales@confidepay.co.zw</p>
         <div className="flex">
@@ -55,7 +56,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-10 text-sm md:flex justify-between">
-          <p className="mb-2">Confide Engineering ©  All rights reserved 2023. </p>
+          <p className="mb-2">Confide Engineering ©  All rights reserved 2025. </p>
           <p>Crafted with love by <LinkButton text="revixions" link="revixions.com" /> Team</p>
         </div>
       </div>
