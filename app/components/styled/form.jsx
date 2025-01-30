@@ -93,7 +93,8 @@ export default function Form() {
 
         <button
           type="submit"
-          className="bg-[#005180] text-white h-[50px] text-center w-full"
+          className="bg-[#005180] text-white h-[50px] text-center w-full flex items-center
+          justify-center"
         >
           {loading ? (
             <div className="loading-button"></div>
