@@ -7,7 +7,7 @@ export async function POST(request: NextRequest, formId: string) {
   const { email, fullName, message, subject } = await request.json();
 
   const transport = nodemailer.createTransport({
-    host: "smtp.office365.com", // Outlook SMTP server
+    host: "smtp.liquidmail.tech", // Outlook SMTP server
     port: 587, // Outlook SMTP port
     secure: false, // Use `false` for port 587
     auth: {
