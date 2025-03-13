@@ -18,11 +18,7 @@ const list = [
     text:"Catering, Industrial Kitchen & Butchery Equipment",
     imageUrl:"/images/catering-and-butcher/banner.webp"
   },
-  {
-    pageUrl:"/commercial-trolleys",
-    text:"Commercial Trolleys",
-    imageUrl:"/images/commercial-trolleys/banner.webp"
-  },
+  
   {
     pageUrl:"/general-hardware-supplies",
     text:"General Hardware & Supplies",
@@ -33,6 +29,11 @@ const list = [
     text:"Fencing",
     imageUrl:"/images/fencing/banner.webp"
   },
+  {
+    pageUrl:"/meter-boxes-and-distribution-boards",
+    text:"Meter Boxes & Distribution Boards",
+    imageUrl:"/images/meter-boxes/banner.webp"
+  }
 ]
 
 export default function WhatWeMake() {

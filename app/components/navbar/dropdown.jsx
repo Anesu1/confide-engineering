@@ -38,10 +38,7 @@ const list = [
     link:"/catering-kitchen-and-butcher",
     text:"Catering & Butcher Equipment"
   },
-  {
-    link:"/commercial-trolleys",
-    text:"Commercial Trolleys"
-  },
+ 
   {
     link:"/fencing",
     text:"Fencing"
@@ -50,6 +47,10 @@ const list = [
     link:"/general-hardware-supplies",
     text:"General Hardware Supplies"
   },
+  {
+    link:"/meter-boxes-and-distribution-boards",
+    text:"Meter Boxes & Distribution Boards"
+  }
 ]
 
 

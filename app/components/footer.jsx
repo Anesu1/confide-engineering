@@ -13,8 +13,8 @@ export default function Footer() {
       <div className="bg-[#0255A1] p-5 text-white md:p-[5%] lg:w-[562px]">
         <h5 className="uppercase text-sm mb-5">Call us today</h5>
         <p className={`${productSansBold.className} text-2xl mb-3`}>
-          16 Ely Close Greencroft <br />
-          Harare, Zimbabwe{" "}
+          No.5 Lustleigh Industrial Site, <br />
+          Bonongwe, Marondera Rural, Zimbabwe{" "}
         </p>
         <p className={`${productSansBold.className} text-2xl mb-3`}>
           Tel: +263 &#40; 242 &#41; 331 307-8 <br />
@@ -23,7 +23,7 @@ export default function Footer() {
         </p>
         <p className="text-2xl mb-3">sales@confidepay.co.zw</p>
         <div className="flex">
-          <SocialLinkFooter link="" >
+          <SocialLinkFooter link="">
             <AiOutlineTwitter />
           </SocialLinkFooter>
           <SocialLinkFooter link="/">
@@ -46,18 +46,38 @@ export default function Footer() {
           <div className="left">
             <h3 className="text-2xl">Our Products</h3>
             <ul>
-              <FooterLink label="Hospital Equipment" pageLink="/hospital-equipment" />
-              <FooterLink label="School and office Equipment" pageLink="/school-and-office-equipment" />
-              <FooterLink label="Catering Equipment, Industrial Kitchen & Butchery Equipment" pageLink="/catering-kitchen-and-butcher" />
-              <FooterLink label="Commercial Trolleys" pageLink="/commercial-trolleys" />
-              <FooterLink label="General Hardware Supplies" pageLink="/general-hardware-supplies" />
+              <FooterLink
+                label="Hospital Equipment"
+                pageLink="/hospital-equipment"
+              />
+              <FooterLink
+                label="School and office Equipment"
+                pageLink="/school-and-office-equipment"
+              />
+              <FooterLink
+                label="Catering Equipment, Industrial Kitchen & Butchery Equipment"
+                pageLink="/catering-kitchen-and-butcher"
+              />
+              <FooterLink
+                label="Commercial Trolleys"
+                pageLink="/commercial-trolleys"
+              />
+              <FooterLink
+                label="General Hardware Supplies"
+                pageLink="/general-hardware-supplies"
+              />
               <FooterLink label="Fencing" pageLink="/fencing" />
             </ul>
           </div>
         </div>
         <div className="mt-10 text-sm md:flex justify-between">
-          <p className="mb-2">Confide Engineering ©  All rights reserved 2025. </p>
-          <p>Crafted with love by <LinkButton text="revixions" link="revixions.com" /> Team</p>
+          <p className="mb-2">
+            Confide Engineering © All rights reserved 2025.{" "}
+          </p>
+          <p>
+            Crafted with love by{" "}
+            <LinkButton text="revixions" link="revixions.com" /> Team
+          </p>
         </div>
       </div>
     </footer>

@@ -12,12 +12,13 @@
   p{
     @apply font-avenir;
   }
+   html{
+  scroll-behavior:smooth;
+ }
 }
 
 
- html{
-  scroll-behavior:smooth;
- }
+
   
   li {
     list-style: none;
