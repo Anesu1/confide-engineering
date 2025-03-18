@@ -12,6 +12,11 @@ export default function Footer() {
     <footer className="lg:flex w-full justify-between">
       <div className="bg-[#0255A1] p-5 text-white md:p-[5%] lg:w-[562px]">
         <h5 className="uppercase text-sm mb-5">Call us today</h5>
+
+        <p className={`${productSansBold.className} text-2xl mb-3`}>
+          16 Ely Close Greencroft <br />
+           Harare, Zimbabwe{" "}
+           </p>
         <p className={`${productSansBold.className} text-2xl mb-3`}>
           No.5 Lustleigh Industrial Site, <br />
           Bonongwe, Marondera Rural, Zimbabwe{" "}

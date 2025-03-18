@@ -32,7 +32,7 @@ const list = [
   {
     pageUrl:"/meter-boxes-and-distribution-boards",
     text:"Meter Boxes & Distribution Boards",
-    imageUrl:"/images/meter-boxes/banner.webp"
+    imageUrl:"/images/meter-boxes/item3.webp"
   }
 ]
 
